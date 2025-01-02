@@ -1,0 +1,26 @@
+<!-- Prototype of a FORM FOR EDITING VARIABLE INFORMATION  -->
+   <link  href="<?=ROOT?>./css/dark.css"   rel="stylesheet">
+   <link  href="<?=ROOT?>./css/style.css"  rel="stylesheet">
+   <link  href="<?=ROOT?>./css/popup.css"  rel="stylesheet">
+ 
+<details>  <!-- Sliders -->
+	<summary> Device mode/setup </summary>
+<div class='item-a btn-group'>	<!-- Command buttons    -->
+	<label>Change to a device with different IP</label>
+	<input type="button"    value="Set IP address" onclick="oWS.EditIP()" >
+	<input type="button"    value="Test Connection" onclick='location.href="http://"+localStorage.WS_IP+"/hello";' >
+	<label>Setup the WiFi connection for your router</label>
+	<input type="button"   value="WiFi Setup" onclick="location.href='devicesetup.html'" >
+
+	<!-- <input type="button"  class='cLeft' value="BlueTooth" onClick="connectviaBT()"   />
+	<input type="button"  class='cLeft' value="BT Start" onClick="startBTnotifications()"   />
+ 			(A button that toggles between bluetoot and WiFi connection)<br></br><br></br>
+	<p>The browser must be bluetooth enabled
+	<p>For Chrome goto locationbar and insert:  chrome://flags/#enable-experimental-web-platform-features
+	<br> -->
+</div>
+</details>
+
+	
+ 
+<script src="<?=ROOT?>./settings.js">		/* Application data*/</script>

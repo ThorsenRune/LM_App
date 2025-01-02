@@ -1,0 +1,80 @@
+/*POPUP */
+.cOverlay {
+
+  position: fixed; /* Sit on top of the page content */
+ /* display: none; /* Hidden by default */
+  border: solid;/* Show outline of popup */
+  border-radius: 4px;
+ /* width: 80%; /* Full width (cover the whole page) */
+ /* height: 80%; /* Full height (cover the whole page) */
+ /* top:10%;
+  left: 10%;
+  */
+   right: 1%;
+  /*bottom: 10%;*/
+
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+
+ }
+
+
+#idText{
+	height:50%;
+	width:100%;
+	color:white;
+
+
+}
+
+
+.item-a{
+    background:black;
+    color: white;
+    float:left;
+
+    border: none;
+    padding: 16px 32px;
+
+    margin: 4px 2px;
+
+    border-radius: 4px;
+    cursor: pointer;
+}
+.item-b{
+  grid-area:main;
+}
+.item-c{
+  grid-area: footer;
+}
+.cOverlay input {
+  margin-bottom: 1rem;
+
+  border: 1px solid #9c9c9c;
+}
+
+.right input[type=number] {
+    width: 8em; /*  6 digits */
+}
+
+.cOverlay   small{
+	display: none;
+  height: fit-content;
+}
+
+.cOverlay p, label {
+  text-align: initial;
+  white-space: nowrap;
+  display: inline;
+}
+.btn-group input[type=button] {
+  background-color: blue; /* Green background */
+  border: 1px solid green; /* Green border */
+  color: white; /* White text */
+  padding: 10px 24px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  width: 50%; /* Set a width if needed */
+  display: block; /* Make the buttons appear below each other */
+}
+
+ 

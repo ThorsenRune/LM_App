@@ -1,0 +1,12 @@
+javasnippets
+
+
+
+// add a CSS class for consistent styling
+var style = document.createElement('style');
+style.innerHTML = `
+    .clsActiveWidget {
+        border: 2px solid #FFFFFF;
+    }
+`;
+document.head.appendChild(style);

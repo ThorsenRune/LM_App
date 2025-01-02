@@ -1,0 +1,136 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+body {
+      font-family: Arial, sans-serif;
+  }
+
+body * {
+  font-size: inherit;
+} 
+
+h1  {
+
+  padding: 10px;
+  text-align: center;
+  }
+
+h2  {
+  padding: 0;
+  text-align: center;
+  margin: 0;
+  }
+
+h3  {
+
+  padding: 10px;
+  text-align: center;
+  }
+p, label    {
+  padding: 10px;
+  text-align: center;
+  margin: 0px 0px;
+  white-space: nowrap;
+}
+
+form
+{
+  text-align: center;
+}
+textarea,
+input {font-size: inherit;font-family: inherit;}
+input[type=submit] {
+  text-align: center;
+  border: none;
+  text-decoration: none;
+  margin: 4px 2px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+input[type=number] {
+  width: 6em;       //Width needed for 6 characters (approx)
+ 
+}
+input[type=checkbox] {
+
+  padding: 12px 20px;
+  margin: 2px 2px;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+ 
+button {
+  border-radius: 4px;
+  border: solid wheat;padding: 8px;
+  padding: 8px;
+  font-size: inherit;
+}
+
+details { /*see:RT210201*/
+  clear: both;
+  background: black;
+  width: fit-content;
+  height: fit-content;
+  display: inline-grid;
+  /*float: left; /* Make the details element float */
+}
+svg {  
+	 flex:auto;    /*  Fill available space in the middle*/
+}
+section {
+  border-bottom: double yellow;
+}
+path {
+ /* stroke: white; */
+  stroke-width: 1px;
+	vector-effect: non-scaling-stroke;  /*Otherwise the curvewidth becomes scaled*/
+  fill: none;
+}
+.cLabel {
+	display: block;
+	float:right;
+    text-align: right;
+    margin-right: 1em;
+}
+
+.signal {  
+  height: 100%;
+  overflow: hidden;
+  text-align: center;
+  padding: 1em;
+}
+.signal .right {
+  float: right;
+}
+//    height: 99%;
+.signal div {
+    border: rebeccapurple solid;
+}
+.cLeft  {
+  float:left;
+  text-align: center;
+  border: none;
+  text-decoration: none;
+  margin: 4px 2px;
+
+  border-radius: 4px;
+  cursor: pointer;	}	/*https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_ref_utilities_right*/
+.cRight{
+  float:right;
+  text-align: center;
+  margin: 4px 2px;
+  border-radius: 4px;
+}
+.fullwidth {
+  width:100%;
+}
+#idDebugText{
+    width: 100%;
+    flex-grow: 1; 
+    height: 80%;
+    resize: none;
+}
+.clsBitWidget {overflow: auto;}
+

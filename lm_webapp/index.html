@@ -1,0 +1,90 @@
+<!--File: index.html
+	This is a testing area landing file
+ -->
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./css/dark.css">
+  <link rel="stylesheet" href="./css/style.css">
+
+</head>
+<body class="cLeft" style="
+    width: min(90%,40em);
+    border: solid blue;
+    left: 5%;
+    position: relative;
+    font-size: large;
+    float: left;
+        text-wrap: pretty;
+            text-align: left;
+">
+		
+	<H1 >	App server mode for LM  </h1>
+	The LM system combines
+		DSP (main LM unit )
+		ESP for connectivity (WIFI or Bluetooth) or WT (Classic Bluetoot Module)
+		A client (Browser running on PC or Android) with a webapplication
+
+	The WebApplication can be served in different ways
+	<p>
+	<div>
+		<a href="http://192.168.123.87/?url=%BASEPATH%/lm_esp/lm_webapp/"
+		>WIFI</a>
+		Use WIFI and Websocket<br>
+		Both ESP and Client needs to be on the same WIFI network<br>
+		The IP of the ESP should be:192.168.123.87
+	</div>
+	<br>
+	<div>
+		<a href="%BASEPATH%/lm_esp/dev/lm_webapp/"
+		>BLUETOOTH</a>
+		Use Classic Bluetooth <br>
+		Rememeber to setup the ESP: 
+		<li>	switch on Bluetooth by issuing a M3 command
+		<li>	swithc off WIFI by M2 
+		<br>
+		This can be done by connecting the ESP connected via USB cable select a serial connection in the consolen in the console
+
+	</div>
+	<br>
+	<div>
+		<a href="http://localhost/public/lm2020/lm_esp/dev/lm_webapp/"
+		>LOCALHOST</a>
+		For development purpose, serving from a localhost (xampp)<br>
+		Both ESP and Client needs to be on the same WIFI network<br>
+		The IP of the ESP should be:192.168.123.87
+	</div>
+	<br>
+ </body>  
+		<a href="%BASEPATH%/lm_esp/dev/lm_webapp/B4A_LMHost/BTWebView.apk">
+			Android App for Bluetooth classic connection
+		</a>
+
+ 
+
+
+
+
+
+<script>
+	function mMakeLocalHost(){
+		var e=document.getElementById('idHome');
+		var h=document.location.host
+		var href=document.location.pathname.replace(".html",".php")
+		if (h==''){
+				href=href.split('htdocs')[1]	
+				href='http://localhost'+href
+				document.getElementById('idHome').href=href;
+		 } else if(h=='localhost'){
+				href='http://thorsen.it'+href
+				document.getElementById('idHome').href=href;
+				e.innerHTML="THORSEN.IT server";
+				e.previousSibling.textContent="Goto server version :"
+		 }
+	}
+
+
+	// Execute mMakeLocalHost() when the DOM is ready
+	document.addEventListener("DOMContentLoaded", function() {
+	    mMakeLocalHost();
+	});
+</script>

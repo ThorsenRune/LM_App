@@ -1,0 +1,183 @@
+/*	file:windows.css
+*/ 
+ 
+
+.controls {
+    position: sticky;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+}
+
+.controls button {
+    margin-right: 10px;
+}
+
+.clsWindow {
+    position: absolute;
+    max-width: 80vw;
+    max-height:80vh;
+    border: 1px solid;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    resize: both;
+    background: #00002b;    /*Verydark blue*/
+    /*  Title- main-footer layout*/
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.clsWindow .clsWidget  {     /*  Dock the window to the top right*/
+      overflow: hidden; 
+}
+.clsWindow.minimized {     /*  Dock the window to the top right*/
+    max-height: 2em;
+    max-width: 10em;
+    position: static;
+    float: right;
+    resize: none;
+    overflow: hidden;
+    clear: right;       /*  Align to the right*/
+    margin-left: auto;
+}
+
+.title-bar {
+    background-color: #444;
+    color: #fff;
+    cursor: move;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title-bar .title {
+    flex: 1;   
+    margin: 5px; 
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.title-bar .close-btn {
+    //background: dimgrey;
+   // min-width:50px;
+    cursor: pointer;
+    padding: 5px;
+     //font-family: 'Courier';
+}
+ 
+.clsWindow.minimized .close-btn::before {
+   content: '▼🔳'; /* Symbol for maximizing */
+}
+.clsWindow  .close-btn::before {
+    content: '▶─'; /* Symbol for minimizing */
+}
+
+.content {
+padding: 10px;
+}
+
+.clsWindow header,
+
+ 
+.styButtonContainer {
+    display: flex;    
+    justify-content: space-around;    
+    padding-bottom: 0.5em;
+}
+.clsWindow footer { 
+    display: flex;    
+   justify-content: space-around;  
+   flex: 0 0 auto; /* Prevents header and footer from growing or shrinking */
+   padding-bottom: 0.5em;
+   text-align: center;
+}
+
+.clsWindow main {
+           flex: 1; /* Makes the main area take up the remaining space */
+            display: flex;
+            flex-direction: column;
+}
+.clsWindow textarea {
+            flex: 1; /* Makes the textarea take up the available space within main */
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+        }
+
+.resizer {
+    width: 20px;
+    height: 20px;
+    //background: dimgrey;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    cursor: se-resize;
+}
+.clsWindow span {
+        display: flex;
+        align-items: center;
+    }
+
+.clsWidget textarea  {
+    flex: 1;
+    margin: 0;
+    padding: 0;
+    align-content: center;
+}
+
+.form1 {
+  border: 1px solid #c1c1c1;
+  padding: 5px;
+  margin: 10;
+  display: grid;  
+  overflow: hidden;
+}
+.form1 span {
+    grid-column: 2 / 3;
+    flex-wrap: wrap;
+}
+.form1 button {
+
+  padding: 0.7em;
+  border: 0;
+}
+
+.form1 small {
+    grid-column: 2 / 3;
+    clear: both;
+    float: left;
+}
+.form1 label {
+    grid-column: 1 / 2;
+  text-align: right;
+  display: block;
+  padding: 0.5em 1em 0.5em 1em;
+}
+.form1 .right,
+.form1 input {
+  //width: 100%;
+  //min-width: 6em;
+  grid-column: 2 / 3;
+  margin-bottom: 0.5rem;
+  background: inherit;
+  color: inherit;
+}
+
+
+
+
+.left {
+        flex: 1;
+    }
+
+.right {
+        margin-left: 10px; /* Adjust margin as needed */
+    }
+
+.clsActiveWidget {
+    border: 2px solid #FFFFFF;
+}
+
+hr {                    /*Full span separator */
+    margin: 20px;
+    grid-column: 1/3;
+}
